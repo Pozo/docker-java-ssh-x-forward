@@ -1,10 +1,9 @@
-# docker-java-ssh-x-forward
-##What is it?
+## What is it?
 This repository shows how to set up your environment for using a dockerized java swing application via SSH
 
-##Usage
+## Usage
 
-####build the application and the docker image
+#### build the application and the docker image
 Run and check the application
 
     ./gradlew run
@@ -27,7 +26,7 @@ Run the container locally first
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     pozo/swing-app:latest
 
-######A few failed attempts and results
+###### A few failed attempts and results
 
     docker run -ti --rm pozo/swing-app:latest 
 
@@ -48,7 +47,7 @@ Run the container locally first
 
     Exception in thread "main" java.awt.AWTError: Can't connect to X11 window server using ':0' as the value of the DISPLAY variable.
 
-####Setup ssh on the server side in order to allow X forwarding
+#### Setup ssh on the server side in order to allow X forwarding
 
 Change ssh config
 
@@ -80,7 +79,7 @@ Don'ts
 
 
 
-####Setup client side for running the application
+#### Setup client side for running the application
 
 ## linux
 
